@@ -1,0 +1,336 @@
+@font-face {
+  font-family: "TT-Hoves-Light";
+  src: local("TT Hoves Light"), local("TT-Hoves-Light"),
+    url("../fonts/TTHoves-Light.woff2") format("woff2"),
+    url("./fonts/TTHoves-Light.woff") format("woff"),
+    url("./fonts/TTHoves-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "TT-Hoves-Regular";
+  src: local("TT Hoves Regular"), local("TT-Hoves-Regular"),
+    url("../fonts/TTHoves-Regular.woff2") format("woff2"),
+    url("../fonts/TTHoves-Regular.woff") format("woff"),
+    url("../fonts/TTHoves-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "TT-Hoves-Medium";
+  src: local("TT Hoves Medium"), local("TT-Hoves-Medium"),
+    url("../fonts/TTHoves-Medium.woff2") format("woff2"),
+    url("../fonts/TTHoves-Medium.woff") format("woff"),
+    url("../fonts/TTHoves-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "TT-Hoves-DemiBold";
+  src: local("TT Hoves DemiBold"), local("TT-Hoves-DemiBold"),
+    url("../fonts/TTHoves-DemiBold.woff2") format("woff2"),
+    url("../fonts/TTHoves-DemiBold.woff") format("woff"),
+    url("../fonts/TTHoves-DemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "TT Hoves";
+  src: local("TT Hoves Bold"), local("TT-Hoves-Bold"),
+    url("../fonts/TTHoves-Bold.woff2") format("woff2"),
+    url("../fonts/TTHoves-Bold.woff") format("woff"),
+    url("../fonts/TTHoves-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: #f3f5f7;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+.left-line-pattern {
+  position: absolute;
+  top: 700px;
+}
+.right-line-pattern {
+  position: absolute;
+  right: 0;
+  top: 1020px;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 75px;
+}
+header a {
+  color: #000;
+}
+.left-side-menu {
+  display: flex;
+}
+.logo {
+  display: flex;
+  gap: 9px;
+  margin-top: 3px;
+  cursor: pointer;
+}
+.logo img {
+  width: 23px;
+  height: 11px;
+  margin-top: 6px;
+}
+.logo-title {
+  text-transform: uppercase;
+  font-size: 20px;
+  font-family: "TT-Hoves-Medium";
+}
+.menu {
+  margin-left: 70px;
+}
+.menu-list {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  font-size: 16px;
+  font-family: "TT-Hoves-Regular";
+  font-weight: 500;
+  line-height: 30.49px;
+}
+ul li a::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: #000;
+  transform: scale(0);
+  transition: all 0.2s;
+}
+ul li:hover a::after {
+  transform: scale(1);
+}
+.members-list {
+  display: flex;
+  gap: 17px;
+  font-size: 16px;
+  font-family: "TT-Hoves-Regular";
+  line-height: 30.49px;
+}
+.wrappers {
+  display: flex;
+}
+.left-wrapper {
+  padding: 180px 100px;
+}
+.left-wrapper-title {
+  max-width: 390px;
+  font-size: 40px;
+  font-family: "TT-Hoves-Medium";
+  line-height: 50px;
+  margin-bottom: 23px;
+}
+.left-wrapper-subtitle {
+  font-size: 14px;
+  font-family: "TT-Hoves-Regular";
+  max-width: 299px;
+  line-height: 18.52px;
+  margin-bottom: 10px;
+}
+.left-wrapper-find {
+  font-size: 16px;
+  font-family: "TT-Hoves-Regular";
+}
+.download-icon {
+  position: relative;
+  top: 10px;
+  left: 5px;
+  cursor: pointer;
+}
+.download-icon:hover {
+  transform: translateY(-3px);
+  transition: 0.3s;
+}
+.right-wrap-logo {
+  position: absolute;
+  width: 100%;
+  top: -15px;
+  z-index: -1;
+}
+.circle {
+  position: relative;
+  width: 480px;
+  height: 480px;
+  background-color: transparent;
+  top: 100px;
+  left: 176px;
+  border: solid 30px #fff;
+  border-radius: 50%;
+}
+.big-logo {
+  position: absolute;
+  width: 100%;
+  display: block;
+  text-align: center;
+  height: 100%;
+  z-index: 100;
+}
+.left-top {
+  position: absolute;
+  width: 600px;
+  border-radius: 0 20px;
+  height: 0;
+  left: 428px;
+  overflow: hidden;
+  border: 16px solid #ffffff;
+  transform: rotate(-100.4deg);
+  z-index: -1;
+}
+.right-top {
+  position: absolute;
+  width: 370px;
+  top: 160px;
+  height: 0px;
+  left: 1100.72px;
+  border: 16px solid #ffffff;
+  transform: rotate(-15.89deg);
+}
+.left-under {
+  position: absolute;
+  width: 100%;
+  height: 0px;
+  top: 802px;
+  border-radius: 20px;
+  right: 300px;
+  border: 15px solid #ffffff;
+  transform: rotate(165deg);
+}
+
+.right-under {
+  position: absolute;
+  width: 800.66px;
+  height: 0px;
+  left: 940px;
+  top: 802px;
+  border: 16px solid #ffffff;
+  transform: rotate(74deg);
+}
+.mission-block {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 40px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 500px;
+  margin-bottom: 100px;
+}
+.mission-block-title {
+  font-family: "TT-Hoves-Regular";
+  max-width: 601px;
+  text-align: center;
+  line-height: 1.4;
+}
+.mission-block-subtitle {
+  font-family: "TT-Hoves-Light";
+  max-width: 684px;
+  text-align: center;
+  line-height: 1.4;
+}
+.majors {
+  display: flex;
+  justify-content: center;
+  gap: 35px;
+  align-items: center;
+}
+.majors-img {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 7px;
+}
+.majors-img p {
+  text-align: center;
+  font-family: "TT-Hoves-Light";
+  font-size: 14px;
+}
+.workshop-list {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+.workshop {
+  width: 227px;
+  height: 553px;
+  background-color: #fff;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
+}
+.workshop:hover {
+  border: 1px solid #4285f4;
+}
+.workshop-most-popular {
+  width: 227px;
+  height: 20px;
+  background-color: rgba(66, 133, 244, 0.35);
+}
+.most-popular-text {
+  text-align: center;
+  color: #4285f4;
+  font-family: "TT-Hoves-Light";
+  font-size: 10px;
+  padding-top: px;
+}
+.workshop-name {
+  font-size: 20px;
+  font-family: "TT-Hoves-Regular";
+  margin-top: 50px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+.workshop-img {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 40px;
+}
+.workshop-subscribe-btn {
+  display: block;
+  margin: 0 auto;
+  padding: 11px 25px;
+  background-color: transparent;
+  border: 0.5px solid #dedede;
+  cursor: pointer;
+  margin-bottom: 30px;
+}
+.workshop-subscribe-btn:hover {
+  background-color: #4285f4;
+  color: #fff;
+}
+.workshop-description-textlist {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.workshop-description-text {
+  display: flex;
+  justify-content: center !important;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.description-text {
+  font-family: "TT-Hoves-Light";
+  font-size: 10px;
+  max-width: 136px;
+}
+.fa-check{
+  color: #4285f4;
+}
