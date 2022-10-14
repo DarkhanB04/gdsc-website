@@ -268,10 +268,11 @@ ul li:hover a::after {
   display: flex;
   justify-content: center;
   gap: 30px;
+  margin-bottom: 100px;
 }
 .workshop {
-  width: 227px;
-  height: 553px;
+  width: 245px;
+  height: 613px;
   background-color: #fff;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
 }
@@ -279,7 +280,12 @@ ul li:hover a::after {
   border: 1px solid #4285f4;
 }
 .workshop-most-popular {
-  width: 227px;
+  position: relative;
+}
+.most-popular {
+  position: absolute;
+  top: -20px;
+  width: 240px;
   height: 20px;
   background-color: rgba(66, 133, 244, 0.35);
 }
@@ -288,12 +294,12 @@ ul li:hover a::after {
   color: #4285f4;
   font-family: "TT-Hoves-Light";
   font-size: 10px;
-  padding-top: px;
+  padding-top: 3px;
 }
 .workshop-name {
   font-size: 20px;
   font-family: "TT-Hoves-Regular";
-  margin-top: 50px;
+  padding-top: 50px;
   margin-bottom: 30px;
   text-align: center;
 }
@@ -324,13 +330,86 @@ ul li:hover a::after {
   display: flex;
   justify-content: center !important;
   gap: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 .description-text {
   font-family: "TT-Hoves-Light";
-  font-size: 10px;
-  max-width: 136px;
+  font-size: 12px;
+  max-width: 170px;
 }
-.fa-check{
+.fa-check {
   color: #4285f4;
+}
+.core-team {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.core-team-title {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 100px;
+}
+.core-team-title-text {
+  position: absolute;
+  font-family: "TT-Hoves-Medium";
+}
+.core-team-members {
+  display: flex;
+  gap: 25px;
+}
+.member-name {
+  font-family: "TT-Hoves-Light";
+  font-size: 22px;
+}
+.core-team-members p {
+  font-family: "TT-Hoves-Light";
+  font-size: 12px;
+}
+.member-block {
+  position: relative;
+  width: 244px;
+  height: 244px;
+}
+.member-img {
+  position: absolute;
+  width: 254px;
+  top: -43px;
+  right: 0.2px;
+  
+}
+.member-position {
+  color: #6098f4;
+}
+.member-doing {
+  max-width: 244px;
+}
+footer {
+  position: relative;
+  height: 200px;
+  background-color: #000;
+  color: #fff;
+  font-family: "TT-Hoves-Light";
+}
+.footer-left-gdsc{
+  padding: 55px 40px
+}
+.fa-brands{
+  color: #98A2B3;
+  font-size: 18px;
+}
+.footer-right{
+  position: absolute;
+  top:0;
+  right: 0;
+  padding: 55px 90px;
+  display: flex;
+  gap: 25px;
+}
+.brands{
+  display: flex;
+  gap: 10px;
 }
