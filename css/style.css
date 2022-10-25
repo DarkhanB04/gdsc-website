@@ -1,48 +1,4 @@
-@font-face {
-  font-family: "TT-Hoves-Light";
-  src: local("TT Hoves Light"), local("TT-Hoves-Light"),
-    url("../fonts/TTHoves-Light.woff2") format("woff2"),
-    url("./fonts/TTHoves-Light.woff") format("woff"),
-    url("./fonts/TTHoves-Light.ttf") format("truetype");
-  font-weight: 300;
-  font-style: normal;
-}
-@font-face {
-  font-family: "TT-Hoves-Regular";
-  src: local("TT Hoves Regular"), local("TT-Hoves-Regular"),
-    url("../fonts/TTHoves-Regular.woff2") format("woff2"),
-    url("../fonts/TTHoves-Regular.woff") format("woff"),
-    url("../fonts/TTHoves-Regular.ttf") format("truetype");
-  font-weight: 400;
-  font-style: normal;
-}
-@font-face {
-  font-family: "TT-Hoves-Medium";
-  src: local("TT Hoves Medium"), local("TT-Hoves-Medium"),
-    url("../fonts/TTHoves-Medium.woff2") format("woff2"),
-    url("../fonts/TTHoves-Medium.woff") format("woff"),
-    url("../fonts/TTHoves-Medium.ttf") format("truetype");
-  font-weight: 500;
-  font-style: normal;
-}
-@font-face {
-  font-family: "TT-Hoves-DemiBold";
-  src: local("TT Hoves DemiBold"), local("TT-Hoves-DemiBold"),
-    url("../fonts/TTHoves-DemiBold.woff2") format("woff2"),
-    url("../fonts/TTHoves-DemiBold.woff") format("woff"),
-    url("../fonts/TTHoves-DemiBold.ttf") format("truetype");
-  font-weight: 600;
-  font-style: normal;
-}
-@font-face {
-  font-family: "TT Hoves";
-  src: local("TT Hoves Bold"), local("TT-Hoves-Bold"),
-    url("../fonts/TTHoves-Bold.woff2") format("woff2"),
-    url("../fonts/TTHoves-Bold.woff") format("woff"),
-    url("../fonts/TTHoves-Bold.ttf") format("truetype");
-  font-weight: 700;
-  font-style: normal;
-}
+
 
 * {
   box-sizing: border-box;
@@ -59,14 +15,24 @@ ul {
 a {
   text-decoration: none;
 }
+.swiper {
+  display: flex;
+  max-width: 1100px;
+  min-height: 400px;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
 .left-line-pattern {
   position: absolute;
   top: 700px;
+  z-index: -100;
 }
 .right-line-pattern {
   position: absolute;
   right: 0;
   top: 1020px;
+  z-index: -100;
 }
 header {
   display: flex;
@@ -128,6 +94,7 @@ ul li:hover a::after {
 }
 .wrappers {
   display: flex;
+  margin-bottom: 200px;
 }
 .left-wrapper {
   padding: 180px 100px;
@@ -168,18 +135,39 @@ ul li:hover a::after {
 }
 .circle {
   position: relative;
-  width: 480px;
-  height: 480px;
+  width: 520px;
+  height: 520px;
   background-color: transparent;
-  top: 100px;
+  top: 50px;
   left: 176px;
   border: solid 30px #fff;
   border-radius: 50%;
 }
+
+/* .circle-around-element {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 101;
+  text-align: center;
+  background-color: #4285f4;
+  border-radius: 50%;
+  animation: spin 5s infinite linear;
+} */
+/* @keyframes spin {
+  from {
+    transform: rotate(0turn) translateY(50%) rotate(1turn);
+  }
+  to {
+    transform: rotate(1turn) translateY(50%) rotate(0turn);
+  }
+}; */
 .big-logo {
   position: absolute;
   width: 100%;
-  display: block;
   text-align: center;
   height: 100%;
   z-index: 100;
@@ -231,7 +219,6 @@ ul li:hover a::after {
   gap: 40px;
   justify-content: center;
   align-items: center;
-  margin-top: 500px;
   margin-bottom: 100px;
 }
 .mission-block-title {
@@ -341,25 +328,34 @@ ul li:hover a::after {
   color: #4285f4;
 }
 .core-team {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  margin-bottom: 160px;
 }
 .core-team-title {
-  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
   margin-bottom: 100px;
 }
 .core-team-title-text {
   position: absolute;
   font-family: "TT-Hoves-Medium";
 }
+.slide-content{
+  position: relative;
+  overflow: hidden;
+}
+
+.swiper-slide{
+  overflow: visible;
+}
 .core-team-members {
+}
+.core-team-member {
   display: flex;
-  gap: 25px;
+  justify-content: center;
+}
+.swiper .member{
 }
 .member-name {
   font-family: "TT-Hoves-Light";
@@ -373,13 +369,14 @@ ul li:hover a::after {
   position: relative;
   width: 244px;
   height: 244px;
+  min-width: 0;
+  overflow: visible;
 }
 .member-img {
   position: absolute;
   width: 254px;
   top: -43px;
   right: 0.2px;
-  
 }
 .member-position {
   color: #6098f4;
@@ -394,22 +391,53 @@ footer {
   color: #fff;
   font-family: "TT-Hoves-Light";
 }
-.footer-left-gdsc{
-  padding: 55px 40px
+.footer-left-gdsc {
+  padding: 55px 40px;
 }
-.fa-brands{
-  color: #98A2B3;
+.fa-brands {
+  color: #98a2b3;
   font-size: 18px;
 }
-.footer-right{
+.footer-right {
   position: absolute;
-  top:0;
+  top: 0;
   right: 0;
   padding: 55px 90px;
   display: flex;
   gap: 25px;
 }
-.brands{
+.brands {
   display: flex;
   gap: 10px;
+}
+.pagination-button-next{
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: #4285F4;
+  position: absolute;
+  right: 105px;
+  top: 40%;
+  cursor: pointer;
+}
+.pagination-button-prev{
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: #4285F4;
+  position: absolute;
+  left: 105px;
+  top: 40%;
+  cursor: pointer;
+}
+.pagination i{
+  color: #fff;
+  font-size: 14px;
+  position: absolute;
+  left: 11px;
+  top: 11px;
+}
+
+.pagination-button-next:hover, .pagination-button-prev:hover{
+  opacity: .70;
 }

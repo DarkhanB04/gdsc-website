@@ -1,0 +1,45 @@
+@font-face {
+    font-family: "TT-Hoves-Light";
+    src: local("TT Hoves Light"), local("TT-Hoves-Light"),
+      url("../fonts/TTHoves-Light.woff2") format("woff2"),
+      url("./fonts/TTHoves-Light.woff") format("woff"),
+      url("./fonts/TTHoves-Light.ttf") format("truetype");
+    font-weight: 300;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: "TT-Hoves-Regular";
+    src: local("TT Hoves Regular"), local("TT-Hoves-Regular"),
+      url("../fonts/TTHoves-Regular.woff2") format("woff2"),
+      url("../fonts/TTHoves-Regular.woff") format("woff"),
+      url("../fonts/TTHoves-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: "TT-Hoves-Medium";
+    src: local("TT Hoves Medium"), local("TT-Hoves-Medium"),
+      url("../fonts/TTHoves-Medium.woff2") format("woff2"),
+      url("../fonts/TTHoves-Medium.woff") format("woff"),
+      url("../fonts/TTHoves-Medium.ttf") format("truetype");
+    font-weight: 500;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: "TT-Hoves-DemiBold";
+    src: local("TT Hoves DemiBold"), local("TT-Hoves-DemiBold"),
+      url("../fonts/TTHoves-DemiBold.woff2") format("woff2"),
+      url("../fonts/TTHoves-DemiBold.woff") format("woff"),
+      url("../fonts/TTHoves-DemiBold.ttf") format("truetype");
+    font-weight: 600;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: "TT Hoves";
+    src: local("TT Hoves Bold"), local("TT-Hoves-Bold"),
+      url("../fonts/TTHoves-Bold.woff2") format("woff2"),
+      url("../fonts/TTHoves-Bold.woff") format("woff"),
+      url("../fonts/TTHoves-Bold.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal;
+  }

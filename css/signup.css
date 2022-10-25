@@ -1,0 +1,157 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: #fff;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+.right-img {
+  position: absolute;
+  width: 55%;
+  height: 100%;
+  right: 0;
+}
+.right-gdsc-logo {
+  position: absolute;
+  top: 35%;
+  right: 23%;
+  width: 115px;
+  height: 115px;
+}
+.gdsc-title {
+  color: #fff;
+  font-family: "TT-Hoves-Medium";
+  position: absolute;
+  top: 50%;
+  right: 21.3%;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 75px;
+}
+header a {
+  color: #000;
+}
+.left-side-menu {
+  display: flex;
+}
+.logo {
+  display: flex;
+  gap: 20px;
+  margin-top: 3px;
+  cursor: pointer;
+}
+.logo img {
+  width: 41px;
+  height: 41px;
+  margin-top: -8px;
+}
+.logo-title {
+  text-transform: uppercase;
+  font-size: 20px;
+  font-family: "TT-Hoves-Medium";
+}
+.menu {
+  margin-left: 30px;
+}
+.menu-list {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  font-size: 16px;
+  font-family: "TT-Hoves-Regular";
+  font-weight: 500;
+  line-height: 30.49px;
+}
+ul li a::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: #000;
+  transform: scale(0);
+  transition: all 0.2s;
+}
+ul li:hover a::after {
+  transform: scale(1);
+}
+.signup-form {
+  width: 320px;
+  height: 420px;
+  margin-left: 135px;
+  margin-top: 90px;
+}
+.signup-title {
+  font-family: "TT-Hoves-Medium";
+  font-size: 26px;
+  margin-bottom: 16px;
+  letter-spacing: 0.03em;
+}
+.signup-subtitle {
+  font-family: "TT-Hoves-Regular";
+  font-size: 16px;
+  color: #6d6f7a;
+  margin-bottom: 35px;
+  letter-spacing: 0.015em;
+}
+form label {
+  display: flex;
+  margin-top: 20px;
+  font-family: "TT-Hoves-Medium";
+  font-size: 16px;
+  margin-bottom: 7px;
+}
+form input {
+  width: 100%;
+  height: 40px;
+  padding: 7px 10px;
+  border: 1px solid #f0f2f4;
+  margin-left: 2px;
+  border-radius: 9px;
+  outline: none;
+}
+input:focus {
+  border: 1px solid #000;
+}
+form button {
+  width: 100%;
+  height: 40px;
+  background-color: #000;
+  color: #fff;
+  margin-top: 40px;
+  border-radius: 5px;
+  margin-bottom: 12px;
+  cursor: pointer;
+}
+
+form p {
+  font-family: "TT-Hoves-Regular";
+  font-size: 16px;
+  text-align: center;
+}
+p a {
+  color: #000;
+}
+.gdsc-left-bottom {
+  position: absolute;
+  bottom: 7px;
+  left: 30px;
+  color: #8d8d8d;
+  font-family: "TT-Hoves-Regular";
+}
+.gdsc-left-bottom-right {
+  position: absolute;
+  bottom: 7px;
+  left: 230px;
+  color: #8d8d8d;
+  font-family: "TT-Hoves-Regular";
+}
