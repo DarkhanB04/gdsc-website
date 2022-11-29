@@ -16,7 +16,7 @@ a {
 .swiper {
   display: flex;
   max-width: 1100px;
-  min-height: 220px;
+  min-height: 400px;
   justify-content: center;
   align-items: center;
   cursor: pointer;
@@ -442,6 +442,7 @@ footer {
   background-color: #000;
   color: #fff;
   font-family: "TT-Hoves-Light";
+  margin-top: 100px;
 }
 .footer-left-gdsc {
   padding: 55px 40px;
@@ -500,6 +501,7 @@ footer {
 @media (max-width: 768px) {
   .swiper {
     max-width: 350px;
+    max-height: 220px;
   }
   .toggle {
     display: flex;
@@ -628,6 +630,7 @@ footer {
     font-size: 6px;
     max-width: 100px;
   }
+
   .core-team-title{
     margin-bottom: 0;
   }
@@ -700,6 +703,7 @@ footer {
     height: 100px;
     background-color: #000;
     color: #fff;
+    margin-top: 0;
     font-family: "TT-Hoves-Light";
   }
   .footer-left-gdsc {
