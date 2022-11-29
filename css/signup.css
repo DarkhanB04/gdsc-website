@@ -13,6 +13,15 @@ ul {
 a {
   text-decoration: none;
 }
+a:hover{
+  opacity: .70;
+}
+button{
+  cursor: pointer;
+}
+button:hover{
+  opacity: .70;
+}
 .right-img {
   position: absolute;
   width: 55%;
@@ -84,6 +93,31 @@ ul li a::after {
 ul li:hover a::after {
   transform: scale(1);
 }
+.google-account-btn{
+  position: relative;
+  width: 100%;
+  height: 42px;
+  background-color: transparent;
+  border-radius: 7px;
+  border: 1px solid #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.google-account-btn p{
+  margin-left: 10px;
+  font-family: "TT-Hoves-Regular";
+}
+.google-icon{
+  margin-left: px;
+}
+
+
+.or-line p{
+  position: absolute;
+  left: 29px;
+
+}
 .signup-form {
   width: 320px;
   height: 420px;
@@ -119,8 +153,46 @@ form input {
   border-radius: 9px;
   outline: none;
 }
+
+.login{
+  border: 0;
+  border-bottom: 2px solid #000;
+  border-radius: 0;
+  margin-top: 30px;
+}
 input:focus {
   border: 1px solid #000;
+}
+.login-form input:focus{
+  border:none;
+  border-bottom: 1px solid #000;
+
+}
+.checkbox-container{
+  display: flex;
+  font-size: 14px;
+  justify-content: space-between;
+  margin-top: 13px;
+  font-family: "TT-Hoves-Regular";
+}
+.checkbox-container a{
+  color: #000;
+  text-decoration: underline;
+}
+
+.checkbox-left{
+  display: flex;
+}
+.remember{
+  font-size: 13px;
+  margin-left: 5px;
+  
+}
+.checkbox-right{
+}
+.checkbox{
+  width: 13px;
+  height: 13px;
 }
 form button {
   width: 100%;

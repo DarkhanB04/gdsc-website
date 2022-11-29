@@ -15,6 +15,11 @@
     <link rel="icon" type="image/x-icon"href="img/gdsc_logo.svg">
   </head>
   <body>
+    <div class="toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
     <img src="img/line-pattern.svg" alt="" class="left-line-pattern">
     <img src="img/line-pattern.svg" alt="" class="right-line-pattern">
     <header>
@@ -45,13 +50,16 @@
           <li class="members-item">
             <a href="signup.html">Sign Up</a>
           </li>
+          <li class="members-item">
+            <a href="login.html">Log in</a>
+          </li>
         </ul>
       </div>
     </header>
     <div class="wrappers">
       <div class="left-wrapper">
         <h1 class="left-wrapper-title">
-          Become a pro coder to grow individually and support others!
+          Become a pro coder <br>to grow individually <br> and support others!
         </h1>
         <p class="left-wrapper-subtitle">
           GDSC AITU is a university club dedicated to master your hard and soft
@@ -65,13 +73,15 @@
             alt="download_icon"
           />
         </h5>
+        <button class="left-wrapper-find button">Find out more
+</button>
       </div>
-      <div class="right-circle-logo">
+      <!-- <div class="right-circle-logo">
         <div class="circle">
           
           <img src="img/big_logo.svg" class="big-logo" alt="" />
         </div>
-      </div>
+      </div> -->
       </div>
       <div class="mission-block">
         <h1 class="mission-block-title">
@@ -114,6 +124,15 @@
         </div>
       </div>
     </div>
+    
+    
+    
+    <div class="slide-content">
+      <div class="nothing-workshop">
+        <div class="pagination-button-next workshop-pagination-button-next"><i class="fa-solid fa-arrow-right"></i></div>
+        <div class="pagination-button-prev workshop-pagination-button-prev"><i class="fa-solid fa-arrow-left"></i></div>
+      </div>                           
+<div class="workshop-list-carousel">
     <div class="workshop-list">
       <div class="workshop">
         <h1 class="workshop-name">Flutter Workshop</h1>
@@ -153,11 +172,11 @@
           
         </div>
       </div>
-      <div class="workshop-most-popular">
-        <div class="most-popular">
-          <p class="most-popular-text">Most popular</p>
-        </div>
         <div class="workshop">
+          <div class="workshop-most-popular">
+            <div class="most-popular">
+              <p class="most-popular-text">Most popular</p>
+            </div>
           <h1 class="workshop-name">Figma Workshop</h1>
           <img src="img/figma.svg" alt="" class="workshop-img">
           <button class="workshop-subscribe-btn">Subscribe</button>
@@ -193,11 +212,9 @@
               How to define design problems, key values, user persona, and journey map.
             </p>
           </div>
-            
           </div>
         </div>
       </div>
-      
       <div class="workshop">
         <h1 class="workshop-name">Python Workshop</h1>
         <img src="img/python.svg" alt="" class="workshop-img">
@@ -296,9 +313,15 @@
             Automating Infrastructure on Google Cloud with Terraform
           </p>
         </div>
+      </div>
         </div>
       </div>
     </div>
+  </div>
+
+
+
+                                                  <!--Core team-->
 
     <div class="core-team">
       <div class="core-team-title">
@@ -307,11 +330,10 @@
       </div>
       <div class="slide-content">
         <div class="pagination">
-          <div class="pagination-button-next"><i class="fa-solid fa-arrow-right"></i></div>
-        <div class="pagination-button-prev"><i class="fa-solid fa-arrow-left"></i></div>
+          <div class="pagination-button-next members-pagination-button-next"><i class="fa-solid fa-arrow-right"></i></div>
+        <div class="pagination-button-prev members-pagination-button-prev"><i class="fa-solid fa-arrow-left"></i></div>
 
         </div>
-        
       <div class="swiper mySwiper core-team-members-carousel">
         <div class="swiper-wrapper core-team-members">
           <div class="swiper-slide core-team-member">
@@ -441,8 +463,6 @@
           <a href=""><i class="fa-brands fa-telegram"></i></a>
           <a href=""><i class="fa-brands fa-instagram"></i></a>
         </div>
-         
-        
       </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>

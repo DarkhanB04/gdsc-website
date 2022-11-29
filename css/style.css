@@ -1,5 +1,3 @@
-
-
 * {
   box-sizing: border-box;
   padding: 0;
@@ -18,10 +16,51 @@ a {
 .swiper {
   display: flex;
   max-width: 1100px;
-  min-height: 400px;
+  min-height: 220px;
   justify-content: center;
   align-items: center;
   cursor: pointer;
+}
+.toggle {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  top: 5px;
+  right: 5px;
+  width: 35px;
+  height: 35px;
+  overflow: hidden;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 15px 20px rgba(0, 0, 0, 0.08);
+}
+.toggle span {
+  position: absolute;
+  width: 15px;
+  height: 3px;
+  background: #4285f4;
+  transition: 0.5s;
+}
+.toggle span:nth-child(1) {
+  transform: translateY(-10px);
+  width: 12px;
+  left: 10px;
+}
+.toggle span:nth-child(3) {
+  transform: translateY(10px);
+  width: 9px;
+  left: 10px;
+}
+.toggle.active span:nth-child(1) {
+  width: 15px;
+  transform: translateY(0px) rotate(45deg);
+}
+.toggle.active span:nth-child(2) {
+  transform: translateX(60px);
+}
+.toggle.active span:nth-child(3) {
+  width: 15px;
+  transform: translateY(0px) rotate(315deg);
 }
 .left-line-pattern {
   position: absolute;
@@ -35,6 +74,7 @@ a {
   z-index: -100;
 }
 header {
+  width: 100%;
   display: flex;
   justify-content: space-between;
   padding: 30px 75px;
@@ -93,8 +133,8 @@ ul li:hover a::after {
   line-height: 30.49px;
 }
 .wrappers {
-  display: flex;
-  margin-bottom: 200px;
+  /* display: flex; */
+  margin-bottom: 100px;
 }
 .left-wrapper {
   padding: 180px 100px;
@@ -111,11 +151,14 @@ ul li:hover a::after {
   font-family: "TT-Hoves-Regular";
   max-width: 299px;
   line-height: 18.52px;
-  margin-bottom: 10px;
+  margin-bottom: 14px;
 }
 .left-wrapper-find {
   font-size: 16px;
   font-family: "TT-Hoves-Regular";
+}
+.left-wrapper-find.button {
+  display: none;
 }
 .download-icon {
   position: relative;
@@ -251,6 +294,16 @@ ul li:hover a::after {
   font-family: "TT-Hoves-Light";
   font-size: 14px;
 }
+.nothing-workshop {
+  display: none;
+}
+.nothing-workshop i {
+  color: #fff;
+  font-size: 14px;
+  position: absolute;
+  left: 11px;
+  top: 11px;
+}
 .workshop-list {
   display: flex;
   justify-content: center;
@@ -328,7 +381,6 @@ ul li:hover a::after {
   color: #4285f4;
 }
 .core-team {
-  margin-bottom: 160px;
 }
 .core-team-title {
   display: flex;
@@ -341,12 +393,12 @@ ul li:hover a::after {
   position: absolute;
   font-family: "TT-Hoves-Medium";
 }
-.slide-content{
+.slide-content {
   position: relative;
   overflow: hidden;
 }
 
-.swiper-slide{
+.swiper-slide {
   overflow: visible;
 }
 .core-team-members {
@@ -355,7 +407,7 @@ ul li:hover a::after {
   display: flex;
   justify-content: center;
 }
-.swiper .member{
+.swiper .member {
 }
 .member-name {
   font-family: "TT-Hoves-Light";
@@ -410,27 +462,30 @@ footer {
   display: flex;
   gap: 10px;
 }
-.pagination-button-next{
+.pagination-button-next {
   width: 36px;
   height: 36px;
   border-radius: 50%;
-  background-color: #4285F4;
+  background-color: #4285f4;
   position: absolute;
   right: 105px;
   top: 40%;
   cursor: pointer;
+  z-index: 100;
 }
-.pagination-button-prev{
+.pagination-button-prev {
   width: 36px;
   height: 36px;
   border-radius: 50%;
-  background-color: #4285F4;
+  background-color: #4285f4;
   position: absolute;
   left: 105px;
   top: 40%;
   cursor: pointer;
+  z-index: 100;
 }
-.pagination i{
+
+.pagination i {
   color: #fff;
   font-size: 14px;
   position: absolute;
@@ -438,6 +493,235 @@ footer {
   top: 11px;
 }
 
-.pagination-button-next:hover, .pagination-button-prev:hover{
-  opacity: .70;
+.pagination-button-next:hover,
+.pagination-button-prev:hover {
+  opacity: 0.7;
+}
+@media (max-width: 768px) {
+  .swiper {
+    max-width: 350px;
+  }
+  .toggle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  header {
+    display: block;
+    padding: 10px 10px;
+    width: 300px;
+    height: 100%;
+    background-color: #fff;
+    z-index: 100;
+    position: fixed;
+    transform: translateX(-300px);
+    transition: 0.5s;
+  }
+  header.active {
+    transform: translateX(0px);
+  }
+  .logo {
+    display: none;
+  }
+  .menu {
+    margin-left: 0;
+  }
+  .menu-list {
+    display: block;
+  }
+  .members-list {
+    display: block;
+  }
+  .wrappers {
+    margin-bottom: 70px;
+    padding-top: 200px;
+  }
+  .left-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0;
+  }
+  .left-wrapper-title {
+    font-size: 26px;
+    line-height: 31px;
+    max-width: 280px;
+  }
+  .left-wrapper-find {
+    display: none;
+  }
+  .left-wrapper-find.button {
+    display: block;
+    width: 92px;
+    height: 30px;
+    font-size: 11px;
+    border: none;
+    background-color: #1fa363;
+    color: #fff;
+    cursor: pointer;
+  }
+  .left-wrapper-find.button:hover{
+    opacity: .70;
+  }
+  .download-icon {
+    display: none;
+  }
+  .mission-block {
+    gap: 30px;
+    margin-bottom: 50px;
+  }
+  .mission-block-title {
+    max-width: 287px;
+    font-size: 26px;
+    line-height: 34px;
+  }
+  .mission-block-subtitle {
+    max-width: 287px;
+    font-size: 12px;
+  }
+
+  .majors {
+    gap: 8px;
+    max-width: 190px;
+  }
+  .majors img {
+    max-width: 25px;
+    max-height: 25px;
+  }
+  .majors-img p {
+    font-size: 10px;
+  }
+  .nothing-workshop {
+    display: block;
+  }
+  .workshop-list{
+    margin-bottom: 60px;
+  }
+  .workshop {
+    width: 134px;
+    height: 380px;
+  }
+  .workshop-name {
+    font-size: 14px;
+    padding-top: 30px;
+  }
+  .workshop-img {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 15px;
+  }
+  .workshop-subscribe-btn {
+    padding: 0;
+    width: 49px;
+    height: 17px;
+    margin-bottom: 30px;
+    font-size: 6px;
+  }
+  .workshop-description-text {
+    gap: 5px;
+    margin-bottom: 12px;
+  }
+  .description-text {
+    font-family: "TT-Hoves-Light";
+    font-size: 6px;
+    max-width: 100px;
+  }
+  .core-team-title{
+    margin-bottom: 0;
+  }
+  .core-team-title-text {
+    font-size: 26px;
+  }
+  .core-team-title-bg {
+    width: 228px;
+    height: 90px;
+  }
+  .fa-check {
+    font-size: 6px;
+  }
+  .pagination-button-next {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background-color: #4285f4;
+    position: absolute;
+    right: 0px;
+    top: 45%;
+    cursor: pointer;
+    z-index: 100;
+  }
+  .pagination-button-prev {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background-color: #4285f4;
+    position: absolute;
+    left: 0px;
+    top: 45%;
+    cursor: pointer;
+    z-index: 100;
+  }
+  .pagination i {
+    color: #fff;
+    font-size: 12px;
+    position: absolute;
+    left: 7px;
+    top: 7px;
+  }
+  .member-block {
+    position: relative;
+    width: 101.41px;
+    height: 101.41px;
+    min-width: 0;
+    overflow: visible;
+  }
+  .member-img {
+    position: absolute;
+    width: 105.55px;
+    height: 119px;
+    top: -17px;
+    right: 0.2px;
+  }
+  .member-name {
+    font-family: "TT-Hoves-Light";
+    font-size: 14px;
+  }
+  .member-position {
+    font-size: 8px !important;
+  }
+  .member-doing {
+    font-size: 6px !important;
+    max-width: 83px;
+  }
+  footer {
+    position: relative;
+    height: 100px;
+    background-color: #000;
+    color: #fff;
+    font-family: "TT-Hoves-Light";
+  }
+  .footer-left-gdsc {
+    padding: 30px 16px;
+    font-size: 10px;
+  }
+  .fa-brands {
+    color: #fff;
+    font-size: 11px;
+  }
+  .footer-right {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 30px 30px;
+    display: flex;
+    gap: 13px;
+    font-size: 10px;
+
+  }
+  .brands {
+    display: flex;
+    gap: 10px;
+  }
 }
