@@ -501,7 +501,7 @@ footer {
 @media (max-width: 768px) {
   .swiper {
     max-width: 350px;
-    max-height: 220px;
+    min-height: 290px;
   }
   .toggle {
     display: flex;
@@ -514,7 +514,7 @@ footer {
     width: 300px;
     height: 100%;
     background-color: #fff;
-    z-index: 100;
+    z-index: 101;
     position: fixed;
     transform: translateX(-300px);
     transition: 0.5s;
@@ -564,8 +564,8 @@ footer {
     color: #fff;
     cursor: pointer;
   }
-  .left-wrapper-find.button:hover{
-    opacity: .70;
+  .left-wrapper-find.button:hover {
+    opacity: 0.7;
   }
   .download-icon {
     display: none;
@@ -598,16 +598,17 @@ footer {
   .nothing-workshop {
     display: block;
   }
-  .workshop-list{
+  .workshop-list {
     margin-bottom: 60px;
   }
   .workshop {
-    width: 134px;
-    height: 380px;
+    width: 134px !important;
+    height: 342px;
   }
   .workshop-name {
     font-size: 14px;
     padding-top: 30px;
+    margin-bottom: 15px;
   }
   .workshop-img {
     width: 40px;
@@ -631,7 +632,7 @@ footer {
     max-width: 100px;
   }
 
-  .core-team-title{
+  .core-team-title {
     margin-bottom: 0;
   }
   .core-team-title-text {
@@ -722,7 +723,6 @@ footer {
     display: flex;
     gap: 13px;
     font-size: 10px;
-
   }
   .brands {
     display: flex;
