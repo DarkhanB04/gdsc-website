@@ -1,4 +1,3 @@
-
 * {
   box-sizing: border-box;
   padding: 0;
@@ -14,14 +13,55 @@ ul {
 a {
   text-decoration: none;
 }
-.pattern{
-    position: absolute;
+.toggle {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  top: 5px;
+  right: 5px;
+  width: 35px;
+  height: 35px;
+  overflow: hidden;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 15px 20px rgba(0, 0, 0, 0.08);
 }
-.pattern.left{
-    bottom: 0;
+.toggle span {
+  position: absolute;
+  width: 15px;
+  height: 3px;
+  background: #4285f4;
+  transition: 0.5s;
 }
-.pattern.right{
-    right: 0;
+.toggle span:nth-child(1) {
+  transform: translateY(-10px);
+  width: 12px;
+  left: 10px;
+}
+.toggle span:nth-child(3) {
+  transform: translateY(10px);
+  width: 9px;
+  left: 10px;
+}
+.toggle.active span:nth-child(1) {
+  width: 15px;
+  transform: translateY(0px) rotate(45deg);
+}
+.toggle.active span:nth-child(2) {
+  transform: translateX(60px);
+}
+.toggle.active span:nth-child(3) {
+  width: 15px;
+  transform: translateY(0px) rotate(315deg);
+}
+.pattern {
+  position: absolute;
+}
+.pattern.left {
+  bottom: 0;
+}
+.pattern.right {
+  right: 0;
 }
 header {
   display: flex;
@@ -74,52 +114,119 @@ ul li a::after {
 ul li:hover a::after {
   transform: scale(1);
 }
-.qr-wrapper{
+.qr-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.qr {
+  width: 196px;
+  height: 196px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  margin-top: 60px;
+  margin-bottom: 50px;
+}
+.qrcode {
+  position: absolute;
+}
+.qr-gdsc-logo {
+  position: absolute;
+  width: 68px;
+  height: 68px;
+  left: 64px;
+  top: 64px;
+}
+.qrcode-registration-title {
+  font-family: "TT-Hoves-Medium";
+  font-size: 32px;
+  margin-bottom: 25px;
+}
+.qr-wrapper ol {
+  font-family: "TT-Hoves-Regular";
+  font-size: 18px;
+  margin-bottom: 40px;
+}
+.qr-wrapper p {
+  font-family: "TT-Hoves-Regular";
+  font-size: 14px;
+  margin-bottom: 13px;
+  text-align: center;
+}
+.direct-link {
+  color: #4285f4;
+}
+.log-in {
+  color: #1fa363;
+}
+@media (max-width: 992px) {
+  .pattern.right {
+    height: 140px;
+    bottom: 0;
+  }
+  .pattern.left {
+    height: 140px;
+  }
+}
+@media (max-width: 768px) {
+  .toggle {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-.qr{
-    width: 196px;
-    height: 196px;
+  }
+  header {
     display: block;
-    margin-left: auto;
-    margin-right: auto;
-    position: relative;
-    margin-top: 60px;
-    margin-bottom: 50px;
-}
-.qrcode{
-    position: absolute;
-}
-.qr-gdsc-logo{
-    position: absolute;
-    width: 68px;
-    height: 68px;
-    left: 64px;
-    top: 64px;
-}
-.qrcode-registration-title{
-    font-family: "TT-Hoves-Medium";
-    font-size: 32px;
-    margin-bottom: 25px;
-}
-.qr-wrapper ol{
-    font-family: "TT-Hoves-Regular";
-    font-size: 18px;
-    margin-bottom: 40px;
-}
-.qr-wrapper p{
-    font-family: "TT-Hoves-Regular";
+    padding: 10px 10px;
+    width: 300px;
+    height: 100%;
+    background-color: #fff;
+    z-index: 101;
+    position: fixed;
+    transform: translateX(-300px);
+    transition: 0.5s;
+  }
+  header.active {
+    transform: translateX(0px);
+  }
+  .left-side-menu {
+    display: block;
+  }
+  .logo {
+    display: none;
+  }
+  .menu {
+    margin-left: 0;
+  }
+  .menu-list {
+    display: block;
+  }
+  .qr {
+    margin-top: 130px;
+    margin-bottom: 30px;
+  }
+  .qrcode-registration-title {
+    font-size: 26px;
+    max-width: 345px;
+    text-align: center;
+    line-height: 132.3%;
+  }
+  .qr-wrapper ol {
     font-size: 14px;
+    margin-bottom: 30px;
+  }
+  .qr-wrapper p {
+    font-family: "TT-Hoves-Regular";
+    font-size: 12px;
     margin-bottom: 13px;
     text-align: center;
+  }
+  .direct-link {
+    color: #4285f4;
+  }
+  .log-in {
+    color: #1fa363;
+  }
 }
-.direct-link{
-    color: #4285F4;
-}
-.log-in{
-    color: #1FA363;
-}
-

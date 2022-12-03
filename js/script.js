@@ -1,12 +1,7 @@
-const toggle = document.querySelector(".toggle");
-const header = document.querySelector("header");
 const workshopCarousel = document.querySelector(".workshop-list-carousel");
 const workshopList = document.querySelector(".workshop-list");
 const workshops = document.getElementsByClassName("workshop");
-toggle.addEventListener("click", () => {
-  toggle.classList.toggle("active");
-  header.classList.toggle("active");
-});
+
 if (window.matchMedia("(max-width: 768px)").matches) {
   workshopCarousel.classList.add("swiper", "workshopSwiper");
   workshopList.classList.add("swiper-wrapper");
@@ -19,7 +14,7 @@ if (window.matchMedia("(max-width: 768px)").matches) {
 }
 
 var swiper1 = new Swiper(".workshopSwiper", {
-  slidesPerView: 4,
+  slidesPerView: 2,
   grabCursor: true,
   loop: true,
   navigation: {
@@ -31,11 +26,11 @@ var swiper1 = new Swiper(".workshopSwiper", {
       slidesPerView: 2,
     },
     768:{
-      slidesPerView: 4,
+      slidesPerView: 2,
     }
   },
 });
-var swiper1 = new Swiper(".mySwiper", {
+var swiper2 = new Swiper(".mySwiper", {
   slidesPerView: 4,
   grabCursor: true,
   loop: true,

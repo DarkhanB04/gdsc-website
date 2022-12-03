@@ -13,14 +13,55 @@ ul {
 a {
   text-decoration: none;
 }
-a:hover{
-  opacity: .70;
+a:hover {
+  opacity: 0.7;
 }
-button{
+button {
   cursor: pointer;
 }
-button:hover{
-  opacity: .70;
+button:hover {
+  opacity: 0.7;
+}
+.toggle {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  top: 5px;
+  right: 5px;
+  width: 35px;
+  height: 35px;
+  overflow: hidden;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 15px 20px rgba(0, 0, 0, 0.08);
+}
+.toggle span {
+  position: absolute;
+  width: 15px;
+  height: 3px;
+  background: #4285f4;
+  transition: 0.5s;
+}
+.toggle span:nth-child(1) {
+  transform: translateY(-10px);
+  width: 12px;
+  left: 10px;
+}
+.toggle span:nth-child(3) {
+  transform: translateY(10px);
+  width: 9px;
+  left: 10px;
+}
+.toggle.active span:nth-child(1) {
+  width: 15px;
+  transform: translateY(0px) rotate(45deg);
+}
+.toggle.active span:nth-child(2) {
+  transform: translateX(60px);
+}
+.toggle.active span:nth-child(3) {
+  width: 15px;
+  transform: translateY(0px) rotate(315deg);
 }
 .right-img {
   position: absolute;
@@ -70,6 +111,7 @@ header a {
   font-family: "TT-Hoves-Medium";
 }
 .menu {
+  display: none;
   margin-left: 30px;
 }
 .menu-list {
@@ -93,7 +135,7 @@ ul li a::after {
 ul li:hover a::after {
   transform: scale(1);
 }
-.google-account-btn{
+.google-account-btn {
   position: relative;
   width: 100%;
   height: 42px;
@@ -104,19 +146,34 @@ ul li:hover a::after {
   justify-content: center;
   align-items: center;
 }
-.google-account-btn p{
+.google-account-btn p {
   margin-left: 10px;
   font-family: "TT-Hoves-Regular";
 }
-.google-icon{
-  margin-left: px;
+.outlook-account-btn {
+  display: none;
+  position: relative;
+  width: 100%;
+  height: 46px;
+  background-color: #f4f6fa;
+  border-radius: 6px;
+  border: 0;
+  justify-content: center;
+  align-items: center;
+}
+.outlook-account-btn p {
+  font-size: 16px;
+  margin-left: 10px;
+  font-family: "TT-Hoves-Medium";
+}
+.outlook-icon {
+  position: absolute;
+  left: 10px;
 }
 
-
-.or-line p{
+.or-line p {
   position: absolute;
   left: 29px;
-
 }
 .signup-form {
   width: 320px;
@@ -125,7 +182,7 @@ ul li:hover a::after {
   margin-top: 90px;
 }
 .signup-title {
-  font-family: "TT-Hoves-Medium";
+  font-family: "TT-Hoves-Demibold";
   font-size: 26px;
   margin-bottom: 16px;
   letter-spacing: 0.03em;
@@ -140,7 +197,7 @@ ul li:hover a::after {
 form label {
   display: flex;
   margin-top: 20px;
-  font-family: "TT-Hoves-Medium";
+  font-family: "TT-Hoves-Regular";
   font-size: 16px;
   margin-bottom: 7px;
 }
@@ -154,7 +211,7 @@ form input {
   outline: none;
 }
 
-.login{
+.login {
   border: 0;
   border-bottom: 2px solid #000;
   border-radius: 0;
@@ -163,34 +220,32 @@ form input {
 input:focus {
   border: 1px solid #000;
 }
-.login-form input:focus{
-  border:none;
+.login-form input:focus {
+  border: none;
   border-bottom: 1px solid #000;
-
 }
-.checkbox-container{
+.checkbox-container {
   display: flex;
   font-size: 14px;
   justify-content: space-between;
   margin-top: 13px;
   font-family: "TT-Hoves-Regular";
 }
-.checkbox-container a{
+.checkbox-container a {
   color: #000;
   text-decoration: underline;
 }
 
-.checkbox-left{
+.checkbox-left {
   display: flex;
 }
-.remember{
+.remember {
   font-size: 13px;
   margin-left: 5px;
-  
 }
-.checkbox-right{
+.checkbox-right {
 }
-.checkbox{
+.checkbox {
   width: 13px;
   height: 13px;
 }
@@ -226,4 +281,120 @@ p a {
   left: 230px;
   color: #8d8d8d;
   font-family: "TT-Hoves-Regular";
+}
+@media (max-width: 1020px) {
+  .right {
+    display: none;
+  }
+  .signup-form {
+    display: block;
+    margin: 0 auto;
+  }
+  .outlook-account-btn {
+    display: flex;
+  }
+  form label {
+    color: #b8c0c6;
+  }
+}
+@media (max-width: 768px) {
+  .toggle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .logo {
+    gap: 20px;
+    margin-top: 3px;
+    cursor: pointer;
+    margin-bottom: 8px;
+  }
+  .logo img {
+    width: 41px;
+    height: 41px;
+    margin-top: -8px;
+  }
+  .logo-title {
+    text-transform: uppercase;
+    font-size: 20px;
+    font-family: "TT-Hoves-Medium";
+  }
+  header {
+    display: block;
+    padding: 10px 10px;
+    width: 300px;
+    height: 100%;
+    background-color: #fff;
+    z-index: 101;
+    position: fixed;
+    transform: translateX(-300px);
+    transition: 0.5s;
+  }
+  header.active {
+    transform: translateX(0px);
+  }
+  .left-side-menu{
+    display: block;
+  }
+  .menu {
+    display: block;
+    margin-left: 0;
+  }
+  .menu-list {
+    display: block;
+  }
+  .signup-form {
+    width: 255px;
+    padding-top: 110px;
+  }
+  .signup-title {
+    font-family: "TT-Hoves-Medium";
+    font-size: 22px;
+    margin-bottom: 16px;
+    letter-spacing: 0.03em;
+  }
+  .signup-subtitle {
+    font-family: "TT-Hoves-Regular";
+    font-size: 13px;
+    color: #6d6f7a;
+    margin-bottom: 35px;
+    letter-spacing: 0.015em;
+  }
+  
+  form label {
+    margin-top: 15px;
+    font-family: "TT-Hoves-Regular";
+    font-size: 14px;
+    margin-bottom: 7px;
+  }
+  form input {
+    width: 100%;
+    height: 40px;
+    padding: 7px 10px;
+    border: none;
+    border-bottom: 1.5px solid #ABABAB;
+    margin-left: 2px;
+    border-radius: 0px;
+    outline: none;
+  }
+  form button {
+    width: 100%;
+    height: 40px;
+    background-color: #6D9BE9;
+    border: none;
+    color: #fff;
+    margin-top: 40px;
+    border-radius: 10px;
+    margin-bottom: 12px;
+    cursor: pointer;
+  }
+  form p{
+    font-size: 12px;
+  }
+  form p a{
+    color: #6D9BE9;
+  }
+  .gdsc-left-bottom, .gdsc-left-bottom-right{
+    display: none;
+  }
 }

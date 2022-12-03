@@ -35,7 +35,7 @@
     font-style: normal;
   }
   @font-face {
-    font-family: "TT Hoves";
+    font-family: "TT-Hoves-Bold";
     src: local("TT Hoves Bold"), local("TT-Hoves-Bold"),
       url("../fonts/TTHoves-Bold.woff2") format("woff2"),
       url("../fonts/TTHoves-Bold.woff") format("woff"),
