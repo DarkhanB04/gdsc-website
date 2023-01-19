@@ -1,53 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GDSC</title>
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
     />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
     <link rel="stylesheet" href="css/vacancies.css" type="text/css" />
-    <link rel="stylesheet" href="css/fonts.css">
-    <link rel="icon" type="image/x-icon"href="img/gdsc_logo.svg">
-</head>
-<body>
+    <link rel="stylesheet" href="css/fonts.css" />
+    <link rel="icon" type="image/x-icon" href="img/gdsc_logo.svg" />
+  </head>
+  <body>
     <div class="toggle">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <img src="img/line-pattern.svg" alt="" class="left-line-pattern" />
+    <img src="img/line-pattern.svg" alt="" class="right-line-pattern" />
+    <div class="logo">
+      <img src="img/gdsc_logo.svg" alt="" />
+      <h1 class="logo-title">GDSC AITU</h1>
+    </div>
     <header>
-        <div class="left-side-menu">
-          <div class="logo">
-            <img src="img/gdsc_logo.svg" alt="" />
-            <h1 class="logo-title">GDSC AITU</h1>
-          </div>
-          <div class="menu">
-            <ul class="menu-list">
-                <li class="menu-item"><span class="icon-span" style="background-color: #4285f4;"><i class="fa-solid fa-house" style="left: 6.5px;"></i></span><span ><a href="/">Home</a></span></li>
-              <li class="menu-item"><span class="icon-span"><i class="fa-solid fa-users"></i></span><span ><a href="#">About</a></span></li>
-              <li class="menu-item"><span class="icon-span" style="background-color: #F4B400;"><i class="fa-solid fa-message" style="left: 7px;"></i>
-              </span><span><a href="#">Contact</a></span></li>
-              <li class="menu-item"><span class="icon-span"style="background-color:#DB4437"><i class="fa-solid fa-briefcase" style="left: 7.4px;"></i></span>
-                <span><a href="vacancies.html">Vacancies</a></span></li>
-            </ul>
-          </div>
-        </div>
-        <div class="members">
-          <ul class="members-list">    
-              <li><button class="signup-qr-button"><a href="registration_qr.html">QR Code <i class="fa-solid fa-qrcode">
-              </i></a></button></li>
-              <li><button class="signup-button"> 
-            <a href="signup.html" style="color: #fff;">Sign Up</a></li>
-          </button>
+      <div class="left-side-menu">
+        <div class="menu">
+          <ul class="menu-list">
+            <li class="menu-item">
+              <span class="icon-span" style="background-color: #4285f4"
+                ><i class="fa-solid fa-house" style="left: 6.5px"></i></span
+              ><span><a href="index.html">Home</a></span>
+            </li>
+            <li class="menu-item">
+              <span class="icon-span"><i class="fa-solid fa-users"></i></span
+              ><span><a href="#">About</a></span>
+            </li>
+            <li class="menu-item">
+              <span class="icon-span" style="background-color: #f4b400"
+                ><i class="fa-solid fa-message" style="left: 7px"></i> </span
+              ><span><a href="#">Contact</a></span>
+            </li>
+            <li class="menu-sign">
+              <button class="signup-qr-button">
+                <a href="registration_qr.html"
+                  >QR Code <i class="fa-solid fa-qrcode"> </i
+                ></a>
+              </button>
+            </li>
+            <li class="menu-sign">
+              <button class="signup-button">
+                <a href="signup.html" style="color: #fff">Sign Up</a>
+              </button>
+            </li>
           </ul>
         </div>
-      </header>
+      </div>
+      <div class="members">
+        <ul class="members-list"></ul>
+      </div>
+    </header>
+    <div class="wrapper">
+      <div class="left-wrapper">
+        <div class="left-wrapper-text">
+          <h1 class="left-wrapper-title">Careers at GDSC AITU</h1>
+          <p class="left-wrapper-subtitle">
+            Welcome to the GDSC AITU job portal! Join us to become a part of one
+            of the most great clubs inside our university. A team with a clear
+            vision, strong work ethic, and a lot of passion to the work that we
+            do every day.
+          </p>
+        </div>
+      </div>
+      <div class="right-wrapper">
+        <div class="right-wrapper-main-picture">
+          <img src="img/vacancies-main.svg" alt="" />
+        </div>
+      </div>
+    </div>
+    <div class="open-positions">
+      <div class="open-positions-text">
+        <h1 class="open-positions-title">
+          We constantly try to make you
+          <span style="color: #4285f4">product of your workspace</span>
+        </h1>
+        <p class="open-positions-subtitle">
+          At GDSC AITU, we work hard to create a comfortable working space and
+          hour for every team member, and we’re happy that the results speaks
+          for itself.
+        </p>
+        <button class="open-positions-button">See open positions</button>
+      </div>
+
+      <div class="open-positions-main-picture">
+        <img src="img/open-positions-main.svg" alt="" />
+      </div>
+    </div>
     <script src="js/navbar.js"></script>
-</body>
+  </body>
 </html>

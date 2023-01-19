@@ -23,6 +23,9 @@ ul {
 a {
   text-decoration: none;
 }
+button {
+  cursor: pointer;
+}
 .toggle {
   display: none;
   position: absolute;
@@ -66,7 +69,7 @@ a {
 }
 .left-line-pattern {
   position: absolute;
-  top: 700px;
+  top: 450px;
   z-index: -100;
 }
 .right-line-pattern {
@@ -78,8 +81,12 @@ a {
 header {
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  padding: 30px 0;
+}
+.logo {
   padding: 30px 75px;
+  position: absolute;
 }
 header a {
   color: #000;
@@ -103,9 +110,7 @@ header a {
   font-size: 20px;
   font-family: "TT-Hoves-Medium";
 }
-.menu {
-  margin-left: 70px;
-}
+
 .menu-list {
   display: flex;
   gap: 20px;
@@ -117,7 +122,7 @@ header a {
 }
 .fa-users,
 .fa-message,
-.fa-briefcase, 
+.fa-briefcase,
 .fa-house {
   display: none;
 }
@@ -155,6 +160,9 @@ ul li a::after {
 }
 ul li:hover a::after {
   transform: scale(1);
+}
+ul .menu-sign:hover a::after {
+  transform: scale(0);
 }
 .members-list {
   display: flex;
@@ -263,4 +271,67 @@ ul li:hover a::after {
     justify-content: center;
     align-items: center;
   }
+}
+.left-wrapper {
+  padding: 200px 100px;
+}
+.left-wrapper-title {
+  font-family: "TT-Hoves-Medium";
+  font-size: 36px;
+  letter-spacing: 1.3px;
+  padding-bottom: 30px;
+}
+.left-wrapper-subtitle {
+  font-family: "TT-Hoves-Light";
+  max-width: 450px;
+  line-height: 160.8%;
+}
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.right-wrapper-main-picture {
+  padding-top: 3px;
+}
+
+.open-positions {
+  display: flex;
+  justify-content: space-between;
+  padding: 170px 100px;
+}
+.open-positions-text {
+}
+.open-positions-title {
+  font-family: "TT-Hoves-Medium";
+  max-width: 490px;
+  font-size: 32px;
+  line-height: 131.8%;
+  padding-bottom: 35px;
+}
+.open-positions-subtitle {
+  font-family: "TT-Hoves-Light";
+  font-size: 16px;
+  line-height: 156.8%;
+  color: #7c7c7c;
+  max-width: 474px;
+  padding-bottom: 35px;
+}
+.open-positions-button {
+  width: 130px;
+  height: 35px;
+  border-radius: 5px;
+  background-color: #4285f4;
+  color: #fff;
+  border: none;
+}
+.open-positions-button:hover {
+  opacity: 0.78;
+}
+.open-positions-main-picture {
+  padding-right: 70px;
+}
+.open-positions-main-picture img {
+  width: 250px;
+  height: 250px;
 }

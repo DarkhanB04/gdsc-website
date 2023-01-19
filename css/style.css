@@ -164,6 +164,12 @@ ul li a::after {
 ul li:hover a::after {
   transform: scale(1);
 }
+.members ul li a::after{
+  content: "";
+  display: block;
+  width: 0%;
+  height: 0px;
+}
 .members-list {
   display: flex;
   gap: 17px;
@@ -627,11 +633,11 @@ footer {
     padding-bottom: 20px;
     padding-left: 7px;
   }
-  .logo h1{
+  .logo h1 {
     padding-left: 2px;
     padding-top: 12px;
   }
-  .logo img{
+  .logo img {
     width: 35px;
     height: 35px;
   }
@@ -660,7 +666,7 @@ footer {
   }
   .menu-item span a {
     padding-left: 10px;
-    margin-top:10px;
+    margin-top: 10px;
   }
   header ul li {
     position: relative;
@@ -675,11 +681,10 @@ footer {
     background-color: #f3f5f7;
   }
   .menu-item .icon-span {
-    background-color: #0F9D58;
+    background-color: #0f9d58;
     width: 35px;
     height: 35px;
     border-radius: 5px;
-
   }
   ul li:hover a::after {
     transform: scale(0);
@@ -689,10 +694,10 @@ footer {
     flex-direction: column;
     gap: 20px;
   }
-  .members-list li button{
+  .members-list li button {
     width: 200px;
   }
-  .members-list{
+  .members-list {
     display: flex;
     flex-direction: column;
     justify-content: center;
