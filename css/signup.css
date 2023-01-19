@@ -179,7 +179,7 @@ ul li:hover a::after {
   width: 320px;
   height: 420px;
   margin-left: 135px;
-  margin-top: 90px;
+  margin-top: 36px;
 }
 .signup-title {
   font-family: "TT-Hoves-Demibold";
@@ -281,6 +281,15 @@ p a {
   left: 230px;
   color: #8d8d8d;
   font-family: "TT-Hoves-Regular";
+}
+.signup-form{
+  padding: ;
+}
+.signup-button{
+  width: 75px;
+  height: 30px;
+  background-color: #000;
+  border: 0;
 }
 @media (max-width: 1020px) {
   .right {

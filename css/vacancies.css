@@ -1,0 +1,266 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: #f3f5f7;
+}
+body::-webkit-scrollbar {
+  width: 0.25rem;
+}
+body::-webkit-scrollbar-track {
+  background: #000;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #4285f4;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+.toggle {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  top: 5px;
+  right: 5px;
+  width: 35px;
+  height: 35px;
+  overflow: hidden;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 15px 20px rgba(0, 0, 0, 0.08);
+}
+.toggle span {
+  position: absolute;
+  width: 15px;
+  height: 3px;
+  background: #4285f4;
+  transition: 0.5s;
+}
+.toggle span:nth-child(1) {
+  transform: translateY(-10px);
+  width: 12px;
+  left: 10px;
+}
+.toggle span:nth-child(3) {
+  transform: translateY(10px);
+  width: 9px;
+  left: 10px;
+}
+.toggle.active span:nth-child(1) {
+  width: 15px;
+  transform: translateY(0px) rotate(45deg);
+}
+.toggle.active span:nth-child(2) {
+  transform: translateX(60px);
+}
+.toggle.active span:nth-child(3) {
+  width: 15px;
+  transform: translateY(0px) rotate(315deg);
+}
+.left-line-pattern {
+  position: absolute;
+  top: 700px;
+  z-index: -100;
+}
+.right-line-pattern {
+  position: absolute;
+  right: 0;
+  top: 1020px;
+  z-index: -100;
+}
+header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 75px;
+}
+header a {
+  color: #000;
+}
+.left-side-menu {
+  display: flex;
+}
+.logo {
+  display: flex;
+  gap: 9px;
+  margin-top: 3px;
+  cursor: pointer;
+}
+.logo img {
+  width: 23px;
+  height: 11px;
+  margin-top: 6px;
+}
+.logo-title {
+  text-transform: uppercase;
+  font-size: 20px;
+  font-family: "TT-Hoves-Medium";
+}
+.menu {
+  margin-left: 70px;
+}
+.menu-list {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  font-size: 16px;
+  font-family: "TT-Hoves-Regular";
+  font-weight: 500;
+  line-height: 30.49px;
+}
+.fa-users,
+.fa-message,
+.fa-briefcase, 
+.fa-house {
+  display: none;
+}
+.signup-button {
+  width: 90px;
+  height: 35px;
+  background-color: #4285f4;
+  border-radius: 6px;
+  color: #fff;
+  border: 0;
+  cursor: pointer;
+}
+.signup-qr-button {
+  width: 90px;
+  height: 35px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.signup-qr-button:hover {
+  opacity: 0.7;
+}
+.signup-button:hover {
+  opacity: 0.9;
+}
+ul li a::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: #000;
+  transform: scale(0);
+  transition: all 0.2s;
+}
+ul li:hover a::after {
+  transform: scale(1);
+}
+.members-list {
+  display: flex;
+  gap: 17px;
+  font-size: 16px;
+  font-family: "TT-Hoves-Regular";
+  line-height: 30.49px;
+}
+@media (max-width: 768px) {
+  .toggle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  header {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 10px;
+    width: 250px;
+    height: 100%;
+    background-color: #fff;
+    z-index: 101;
+    position: fixed;
+    justify-content: unset;
+    gap: 50px;
+    transform: translateX(-300px);
+    transition: 0.5s;
+    overflow: hidden;
+  }
+  header.active {
+    transform: translateX(0px);
+  }
+  .logo {
+    display: flex;
+    padding-bottom: 20px;
+    padding-left: 7px;
+  }
+  .logo h1 {
+    padding-left: 2px;
+    padding-top: 12px;
+  }
+  .logo img {
+    width: 35px;
+    height: 35px;
+  }
+  .menu {
+    margin-left: 0;
+  }
+  .menu-list {
+    display: flex;
+    flex-direction: column;
+  }
+  .menu-item {
+    display: flex;
+  }
+  .left-side-menu {
+    display: block;
+  }
+  .fa-users,
+  .fa-message,
+  .fa-briefcase,
+  .fa-house {
+    display: block;
+    position: relative;
+    font-size: 20px;
+    top: 8px;
+    left: 4.7px;
+    color: #fff;
+  }
+  .menu-item span a {
+    padding-left: 10px;
+    margin-top: 10px;
+  }
+  header ul li {
+    position: relative;
+    width: 100%;
+    height: 40px;
+    border-radius: 12px;
+    border: 8px solid transparent;
+  }
+
+  .menu-item.active {
+    transform: translateX(30px);
+    background-color: #f3f5f7;
+  }
+  .menu-item .icon-span {
+    background-color: #0f9d58;
+    width: 35px;
+    height: 35px;
+    border-radius: 5px;
+  }
+  ul li:hover a::after {
+    transform: scale(0);
+  }
+  .members-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .members-list li button {
+    width: 200px;
+  }
+  .members-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
